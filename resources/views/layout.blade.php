@@ -13,8 +13,6 @@
 <body>
     @include('navbar')
     @yield('content')
-
-
     @include('footer')
 </body>
 

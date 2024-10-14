@@ -10,6 +10,14 @@ class Ticket extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'movie_id',
+        'customer_name',
+        'seat_number',
+        'is_checked_in',
+        'check_in_time'
+    ];
+
     public function movie(): BelongsTo
     {
         return $this->belongsTo(Movie::class, 'movie_id', 'id');

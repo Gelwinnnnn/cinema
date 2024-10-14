@@ -15,7 +15,7 @@ class MovieController extends Controller
 
     public function show(Movie $movie)
     {
-        $data['movie'] = $movie;
+        $data['movie'] = $movie->load(['tickets']);
         return view('movie-tickets', $data);
     }
 }
